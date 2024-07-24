@@ -37,15 +37,16 @@ const Button = styled.button`
 
 interface HeaderProps {
   onLoginClick: () => void;
+  onRegisterClick: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ onLoginClick }) => {
+const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick  }) => {
   return (
     <HeaderContainer>
       <Title>SocialZ</Title>
       <ButtonContainer>
         <Button onClick={onLoginClick}>Login</Button>
-        <Button>Register</Button>
+        <Button onClick={onRegisterClick}>Register</Button>
       </ButtonContainer>
     </HeaderContainer>
   );
