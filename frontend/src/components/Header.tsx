@@ -35,7 +35,6 @@ const Button = styled.button`
   }
 `;
 
-// Component
 interface HeaderProps {
   onLoginClick: () => void;
 }
