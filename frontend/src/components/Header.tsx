@@ -6,13 +6,13 @@ const HeaderContainer = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #f4f4f4;
-  border-bottom: 1px solid #ddd;
+  background-color: #181818;
 `;
 
 const Title = styled.a`
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #FFF;
 `;
 
 const ButtonContainer = styled.div`
