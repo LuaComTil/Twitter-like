@@ -5,22 +5,20 @@ import { useAuth } from '../Context/AuthContext';
 import PostTweet from './PostTweet';
 
 const FeedContainer = styled.div`
-  padding: 20px;
   background: black;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   color: #FFF;
+  flex: 3.5 1 60%;
 `;
 
 const TweetContainer = styled.div`
-  border-bottom: 1px solid #e1e8ed;
-  padding: 2px 0.5rem;
-  margin-bottom: 10px;
+  border: 1px solid rgb(62, 65, 68);
+  padding: 0.5rem 6%;
   display: flex;
   flex-direction: column;
 `;
 
 const UserName = styled.span`
-  font-weight: bold;
+  font-weight: 500;
   margin-right: 8px;
 `;
 

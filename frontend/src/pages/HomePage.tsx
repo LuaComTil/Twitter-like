@@ -4,12 +4,17 @@ import Feed from '../components/Feed';
 import Login from '../components/Login';
 import Register from '../components/Register';
 import styled from 'styled-components';
-import Sidebar from '../components/Sidebar';
+import SideBar from '../components/SideBar';
 
 const HomeContainer = styled.section`
-  display: flex;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
+  background: black;
+`;
+
+const HomeInnerContainer = styled.section`
+  display: flex;
+  padding: 0 10%;
 `;
 
 const HomePage: React.FC = () => {
@@ -24,11 +29,13 @@ const HomePage: React.FC = () => {
 
   return (
     <HomeContainer>
-      <Header onLoginClick={openLogin} onRegisterClick={openRegister}/>
-      <Feed/>
-      <Sidebar/>
-      <Login visible={isLoginVisible} onClose={closeLogin}/>
-      <Register visible={isRegisterVisible} onClose={closeRegister}/>
+      <HomeInnerContainer>
+        <Header onLoginClick={openLogin} onRegisterClick={openRegister}/>
+        <Feed/>
+        <SideBar/>
+        <Login visible={isLoginVisible} onClose={closeLogin}/>
+        <Register visible={isRegisterVisible} onClose={closeRegister}/>
+      </HomeInnerContainer>
     </HomeContainer>
   );
 };
