@@ -10,7 +10,7 @@ const HeaderContainer = styled.header`
   border-bottom: 1px solid #ddd;
 `;
 
-const Title = styled.div`
+const Title = styled.a`
   font-size: 24px;
   font-weight: bold;
 `;
@@ -43,7 +43,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick  }) => {
   return (
     <HeaderContainer>
-      <Title>SocialZ</Title>
+      <Title href='http://localhost:5173'>Bostiller</Title>
       <ButtonContainer>
         <Button onClick={onLoginClick}>Login</Button>
         <Button onClick={onRegisterClick}>Register</Button>
