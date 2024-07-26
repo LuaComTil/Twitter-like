@@ -1,12 +1,12 @@
 import { AuthProvider } from "./Context/AuthContext";
-import FeedPage from "./pages/FeedPage";
+import HomePage from "./pages/HomePage";
 
 
 const App: React.FC = () => {
   return (
     <>
       <AuthProvider>
-        <FeedPage/>
+        <HomePage/>
       </AuthProvider>
     </>
   )

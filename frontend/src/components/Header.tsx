@@ -3,10 +3,11 @@ import styled from 'styled-components';
 
 const HeaderContainer = styled.header`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #181818;
+  background-color: black;
 `;
 
 const Title = styled.a`
