@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import axios from './services/axiosConfig';
-import { useAuth } from './Context/AuthContext';
-import PostTweet from './components/PostTweet';
+import axios from '../services/axiosConfig';
+import { useAuth } from '../Context/AuthContext';
+import PostTweet from './PostTweet';
 
 const FeedContainer = styled.div`
   max-width: 600px;
@@ -18,12 +18,6 @@ const TweetContainer = styled.div`
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
-`;
-
-const UserInfo = styled.div`
-  display: flex;
-  align-items: center;
-  margin-bottom: 8px;
 `;
 
 const UserName = styled.span`
@@ -43,7 +37,7 @@ interface Tweet {
   username: string;
 }
 
-const FeedPage: React.FC = () => {
+const Feed: React.FC = () => {
   const [tweets, setTweets] = useState<Tweet[]>([]);
   const [loading, setLoading] = useState(true);
   const { isAuthenticated } = useAuth();
@@ -69,9 +63,7 @@ const FeedPage: React.FC = () => {
       {isAuthenticated && <PostTweet/>}
       {tweets.map((tweet) => (
         <TweetContainer key={tweet.tweetId}>
-          <UserInfo>
-            <UserName>{tweet.username}</UserName>
-          </UserInfo>
+          <UserName>{tweet.username}</UserName>
           <TweetText>{tweet.content}</TweetText>
         </TweetContainer>
       ))}
@@ -79,4 +71,4 @@ const FeedPage: React.FC = () => {
   );
 };
 
-export default FeedPage;
+export default Feed;

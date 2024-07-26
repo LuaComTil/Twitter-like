@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Header from "./components/Header"
-import FeedPage from "./FeedPage"
+import Feed from "./components/Feed"
 import Login from "./components/Login";
 import { AuthProvider } from "./Context/AuthContext";
 import Register from "./components/Register";
@@ -20,7 +20,7 @@ const App: React.FC = () => {
     <>
       <AuthProvider>
         <Header onLoginClick={openLogin} onRegisterClick={openRegister}/>
-        <FeedPage/>
+        <Feed/>
         <Login visible={isLoginVisible} onClose={closeLogin}/>
         <Register visible={isRegisterVisible} onClose={closeRegister}/>
       </AuthProvider>
