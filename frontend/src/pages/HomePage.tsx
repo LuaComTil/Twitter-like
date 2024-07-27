@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Header from '../components/Header';
-import Feed from '../components/Feed';
+import Header from '../components/main/Header';
+import Feed from '../components/main/Feed';
 import Login from '../components/Login';
 import Register from '../components/Register';
 import styled from 'styled-components';
-import SideBar from '../components/SideBar';
+import SideBar from '../components/main/SideBar';
 
 const HomeContainer = styled.section`
   min-height: 100vh;

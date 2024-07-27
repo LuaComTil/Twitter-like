@@ -3,14 +3,15 @@ import styled from 'styled-components';
 
 const StyledTitle = styled.h6`
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  padding: 0.8rem 1rem;
 `;
 
 interface CardProps {
   children: ReactNode;
 }
 
-const Card__Title: React.FC<CardProps> = ({children}) => {
+const CardTitle: React.FC<CardProps> = ({children}) => {
   return (
     <StyledTitle>
       {children}
@@ -18,4 +19,4 @@ const Card__Title: React.FC<CardProps> = ({children}) => {
   );
 };
 
-export default Card__Title;
+export default CardTitle;

@@ -11,6 +11,7 @@ const StyledButton = styled.button`
   background-color: #007bff;
   color: white;
   transition: background-color 0.3s;
+  width: fit-content;
 
   &:hover {
     background-color: #0056b3;

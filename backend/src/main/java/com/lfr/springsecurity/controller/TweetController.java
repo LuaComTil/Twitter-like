@@ -31,7 +31,7 @@ public class TweetController {
 
     @GetMapping("/feed")
     public ResponseEntity<FeedDto> feed(@RequestParam(value = "page", defaultValue = "0") int page,
-                                        @RequestParam(value = "pageSize", defaultValue = "10") int pageSize) {
+                                        @RequestParam(value = "pageSize", defaultValue = "50") int pageSize) {
         var tweets = tweetRepository.findAll(
                         PageRequest.of(page,
                                 pageSize,
