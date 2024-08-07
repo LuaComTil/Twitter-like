@@ -154,7 +154,7 @@ const SideBar: React.FC = () => {
           </More>
         </Trend>
         <Trend>
-          <TrendContext>Trending with <TrendWith href="#">Luã</TrendWith></TrendContext>
+          <TrendContext>Trending with <TrendWith href="#">LuaComTil</TrendWith></TrendContext>
           <TrendContent>RestAPI</TrendContent>
           <TrendPosts>7.2K posts</TrendPosts>
           <More>
